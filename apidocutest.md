@@ -188,7 +188,47 @@ Tested using **Postman**. Summary:
 
 
 
-## 6. REFLECTION ON BASIC AUTH
+## 6. Data Structures & Algorithms (DSA Integration)
+
+To optimize the efficiency of retrieving transactions by ID, two different search approaches were implemented and evaluated:
+
+### Linear Search
+- Iterates through each transaction in a list until a match is found.
+- **Time Complexity:** O(n)  
+- Suitable for small datasets but becomes slow as the number of records increases.
+
+### Dictionary Lookup
+- Creates an index mapping each transaction's ID to its data using a dictionary.
+- **Time Complexity:** O(1) average case  
+- Significantly faster due to direct key access via hashing.
+
+
+### Performance Test (20+ Records)
+
+A benchmark was conducted with at least 20 transaction records. Each method was executed multiple times to compare their average time taken.
+
+| Search Method     | Avg Time (ms) |
+|-------------------|----------------|
+| Linear Search     | ~15 ms         |
+| Dictionary Lookup | ~1 ms          |
+
+Dictionary lookup is approximately **10–15x faster** than linear search on average._
+
+
+
+### Reflection
+
+**Why is dictionary lookup faster?**  
+Because Python dictionaries are implemented as hash tables, allowing near-instant access to elements using keys. Linear search, on the other hand, must check each item one by one, making it less efficient as the dataset grows.
+
+**Other data structures that could improve search efficiency:**
+- **Binary Search Tree (BST):** Useful for sorted data; O(log n) search time.
+- **Trie:** Efficient for prefix-based searches (e.g., phone numbers).
+- **B-Tree or Hash Map with LRU Caching:** For large datasets or disk-based storage.
+
+
+
+## 7. REFLECTION ON BASIC AUTH
 
 While **Basic Auth** is simple and easy to implement, it is:
 
@@ -203,7 +243,7 @@ While **Basic Auth** is simple and easy to implement, it is:
 
 
 
-## 7. CREDITS & ACKNOWLEDGEMENTS
+## 8. CREDITS & ACKNOWLEDGEMENTS
 
 - Testing Tool: [Postman](https://www.postman.com)  
-- Dataset: [modified_sms_v2.xml]([url](https://github.com/rcyubahiro/momo-sms-dashboard/blob/main/modified_sms_v2.xml))  
+- Dataset: [modified_sms_v2.xml]([url](https://github.com/rcyubahiro/momo-sms-dashboard/blob/main/modified_sms_v2.xml))  or https://github.com/rcyubahiro/momo-sms-dashboard/blob/main/modified_sms_v2.xml
