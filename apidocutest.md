@@ -50,7 +50,7 @@ Returns all transactions.
 ]
 ```
 
----
+
 
 ### GET /transactions/{id}
 
@@ -73,7 +73,7 @@ Returns a specific transaction by ID.
 { "error": "Transaction not found" }
 ```
 
----
+
 
 ### POST /transactions
 
@@ -102,7 +102,7 @@ Creates a new transaction.
 }
 ```
 
----
+
 
 ### PUT /transactions/{id}
 
@@ -127,7 +127,7 @@ Updates a transaction (e.g., amount).
 }
 ```
 
----
+
 
 ### DELETE /transactions/{id}
 
@@ -136,7 +136,7 @@ Deletes a transaction.
 - **Response:**  
 `204 No Content` (success)
 
----
+
 
 ## 4. AUTHENTICATION & SECURITY
 
@@ -165,7 +165,6 @@ All endpoints are protected using **Basic Authentication**.
 - **JWT (JSON Web Tokens)**  
 - **OAuth 2.0**
 
----
 
 
 ## 5. TESTING & VALIDATION
@@ -187,9 +186,7 @@ Tested using **Postman**. Summary:
 | GET without auth          | 401 Unauthorized | ![WhatsApp Image 2025-10-02 at 19 30 07_c3de7770](https://github.com/user-attachments/assets/7fae1c29-11cf-4f19-b983-785bc379ebdc)
 
 
-_All screenshots are available in the `/screenshots/` folder._
 
----
 
 ## 6. REFLECTION ON BASIC AUTH
 
@@ -204,7 +201,7 @@ While **Basic Auth** is simple and easy to implement, it is:
 - **JWT** for stateless sessions  
 - **OAuth 2.0** for delegated access
 
----
+
 
 ## 7. CREDITS & ACKNOWLEDGEMENTS
 
